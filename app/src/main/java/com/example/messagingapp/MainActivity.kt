@@ -26,11 +26,11 @@ class MainActivity : AppCompatActivity(), MessageListener {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
-        //Register sms listener
         MessageReceiver.bindListener(this)
         initView()
         viewActionClickListener()
         loadList()
+
     }
 
     @SuppressLint("NotifyDataSetChanged")
