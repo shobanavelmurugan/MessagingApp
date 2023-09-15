@@ -18,7 +18,6 @@ public class MessageReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         final Bundle bundle = intent.getExtras();
-        Toast.makeText(context,"===>Invoked onReceive()",Toast.LENGTH_SHORT).show();
         try {
             if (bundle != null) {
                 final Object[] pdusObj = (Object[]) bundle.get("pdus");
